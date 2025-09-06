@@ -53,8 +53,8 @@ for(var i =0;i<operator.length;i++){
              if(output==""&&history!=""){
                 history= history.substr(0,history.length-1);
              }
-        }
-        if(output!=="" || history1==""){
+        
+        if(output!=="" || history!==""){
             output= output==""?output:reverseNumberFormat(output);
             history=history+output;
             if(this.id=="="){
@@ -68,7 +68,17 @@ for(var i =0;i<operator.length;i++){
                 printOutput("");
             }
         }
-            )
+    }
+});
+}
+var number = document.getElementById("number");
+for(var i =0;i<number.length;i++){
+    number[i].addEventListener('click',function(){
+        var output=reverseNumberFormat(getOutput());
+        if(outptut!=NaN){ // if output is a number
+            output=output+this.id;
+            printOutput(output);
+
         }
     });
 }
