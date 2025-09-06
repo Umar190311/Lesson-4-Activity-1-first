@@ -75,7 +75,7 @@ var number = document.getElementById("number");
 for(var i =0;i<number.length;i++){
     number[i].addEventListener('click',function(){
         var output=reverseNumberFormat(getOutput());
-        if(outptut!=NaN){ // if output is a number
+        if(output!=NaN){ // if output is a number
             output=output+this.id;
             printOutput(output);
 
